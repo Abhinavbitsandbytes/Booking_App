@@ -1,4 +1,6 @@
 
+<div *ngIf="!filteredEvents && startServerMessage" class="white-color">Please start json server using command <span class="heading tomato_color" > json-server --watch db.json</span>  </div>
+
 <div class="container-fluid" *ngIf="filteredEvents">
   <div class="row search_box" >
     <div class="col-md-6 col-12">
@@ -16,8 +18,7 @@
           <ng-container *ngIf="filteredEvents.length>0; else no_event">
           <div class="col-md-3 col-12" *ngFor=" let event of filteredEvents">
             <mat-card class="event-card">
-              <img mat-card-image [src]="event.imagePath" alt = {{event.name}}
-              style="width:225px; height:200px; object-fit: cover; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);">            
+              <img mat-card-image [src]="event.imagePath" alt = {{event.name}} class="image-card">            
             
               <p class="event-title heading">
                 {{event.name}}
@@ -30,12 +31,12 @@
               </p>
               <button *ngIf="event.seats>0" (click)="book_event(event.id)" type="button " class="btn btn-default book_now_button">BOOK NOW</button>
               <p *ngIf="event.seats<=0" class="event-title heading">
-                 <span style="color:red"> Sold Out </span>
+                 <span class="red-color"> Sold Out </span>
                 </p>
               </mat-card>
           </div>
         </ng-container>
-        <ng-template #no_event><span style="color: white"> No results found! </span></ng-template>
+        <ng-template #no_event><span class="white-color"> No results found! </span></ng-template>
         </div>
       </ng-container>
 

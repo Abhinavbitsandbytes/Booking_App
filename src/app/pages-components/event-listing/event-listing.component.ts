@@ -12,6 +12,7 @@ export class EventListingComponent implements OnInit {
   event_data: any;
   private _searchTerm : string
   public filteredEvents : any
+  public startServerMessage : boolean
 
   constructor(public event_service: EventDataService, private _router: Router,) {
   this.event_service.getEventDetails().subscribe(data =>{
@@ -49,6 +50,8 @@ book_event(id){
  this._router.navigate(['/book-event'], { queryParams: queryParams }) 
 }
   ngOnInit() {
+    setTimeout(() => {
+       this.startServerMessage=true }, 2000);
   }
 
 }

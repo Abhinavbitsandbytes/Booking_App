@@ -11,7 +11,7 @@
         <div class="col-md-3">
             <mat-form-field>
                 <mat-label>Name</mat-label>
-                <input style="width: 100%; " matInput placeholder="Name*"
+                <input  matInput placeholder="Name*"
                     name="name" formControlName="name" required>
                     <mat-error *ngIf="bookingForm.get('name').errors">{{getErrrorMessage('name')}} </mat-error>
             </mat-form-field>
@@ -64,7 +64,7 @@
       <div *ngIf=" !bookingForm.get('seats').errors && bookingForm.get('seats').value && seatMap[bookingForm.get('seats').value]>1" class="col-md-2">
           <mat-form-field>
               <mat-label>Name of Attendee 2</mat-label>
-              <input style="width: 100%" matInput placeholder="Name of Attendee 2"
+              <input  matInput placeholder="Name of Attendee 2"
                   name="attendee2" formControlName="attendee2" required>
                   <mat-error >“Please enter the name of Attendee 2</mat-error>
           </mat-form-field>
@@ -72,7 +72,7 @@
       <div *ngIf="!bookingForm.get('seats').errors && bookingForm.get('seats').value && seatMap[bookingForm.get('seats').value]>2" class="col-md-2">
           <mat-form-field>
               <mat-label>Name of Attendee 3</mat-label>
-              <input style="width: 100%" matInput placeholder="Name of Attendee 3"
+              <input  matInput placeholder="Name of Attendee 3"
                   name="attendee3" formControlName="attendee3" required>
                   <mat-error >“Please enter the name of Attendee 3</mat-error>
           </mat-form-field>
@@ -80,7 +80,7 @@
       <div *ngIf="!bookingForm.get('seats').errors && bookingForm.get('seats').value && seatMap[bookingForm.get('seats').value]>3" class="col-md-2">
           <mat-form-field>
               <mat-label>Name of Attendee 4</mat-label>
-              <input style="width: 100%" matInput placeholder="Name of Attendee 4"
+              <input  matInput placeholder="Name of Attendee 4"
                   name="attendee4" formControlName="attendee4" required>
                   <mat-error >“Please enter the name of Attendee 4</mat-error>
           </mat-form-field>
@@ -88,7 +88,7 @@
       <div *ngIf="!bookingForm.get('seats').errors && bookingForm.get('seats').value && seatMap[bookingForm.get('seats').value]>4" class="col-md-2">
           <mat-form-field>
               <mat-label>Name of Attendee 5</mat-label>
-              <input style="width: 100%" matInput placeholder="Name of Attendee 5"
+              <input  matInput placeholder="Name of Attendee 5"
                   name="attendee5" formControlName="attendee5" required>
                   <mat-error >“Please enter the name of Attendee 5</mat-error>
           </mat-form-field>
@@ -96,15 +96,13 @@
       <div *ngIf="!bookingForm.get('seats').errors && bookingForm.get('seats').value && seatMap[bookingForm.get('seats').value]>5" class="col-md-2">
           <mat-form-field>
               <mat-label>Name of Attendee 6</mat-label>
-              <input style="width: 100%" matInput placeholder="Name of Attendee 6"
+              <input  matInput placeholder="Name of Attendee 6"
                   name="attendee6" formControlName="attendee6" required>
                   <mat-error >“Please enter the name of Attendee 6</mat-error>
           </mat-form-field>
       </div>
     
   </div>
-
-
 </form>
 
 <div class="row" style="margin-top: 80px;">
