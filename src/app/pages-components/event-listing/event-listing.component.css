@@ -1,0 +1,32 @@
+     .card_content{
+      margin-top: 64px;
+      text-align: center
+    }
+    .event-title{
+        text-align: center;
+        color: white;
+    }
+    .heading{
+        font-weight: bold;
+    }
+    .book_now_button{
+        background-color: crimson;
+        color:white;
+        outline: none;
+        -moz-user-focus: normal
+    }
+     .book_now_button:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      }
+      .mat-card {
+        background:#343941 !important;
+
+    }
+    .mat-card:not([class*=mat-elevation-z]) {
+        box-shadow: none
+    }
+    .search_box{
+        margin: 24px; 
+        text-align: center
+
+    }

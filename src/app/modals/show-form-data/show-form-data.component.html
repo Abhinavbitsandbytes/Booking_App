@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-md-12" style="text-align: center">
+    <span>BOOKING DETAILS</span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <span >  Name : </span>  {{formData.get('name').value}}
+  </div>
+  <div class="col-md-6">
+    <span >   Email : </span>  {{formData.get('email').value}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+      <span>  Phone Number : </span>  {{formData.get('mobile_no').value}}
+    </div>
+    <div class="col-md-6">
+      <span> No. of Seats : </span>  {{formData.get('seats').value}}
+      </div>
+  </div>
+  <div class="row">
+      <div *ngIf="formData.get('attendee2').value" class="col-md-6">
+        <span>  Name of Attendee 2 : </span> {{formData.get('attendee2').value}}
+      </div>
+      <div *ngIf="formData.get('attendee3').value" class="col-md-6">
+        <span>  Name of Attendee 3 :  </span> {{formData.get('attendee3').value}}
+        </div>
+    </div>
+    <div class="row">
+        <div *ngIf="formData.get('attendee4').value" class="col-md-6">
+          <span>  Name of Attendee 4 : </span> {{formData.get('attendee4').value}}
+        </div>
+        <div *ngIf="formData.get('attendee5').value" class="col-md-6">
+          <span> Name of Attendee 5 : </span>   {{formData.get('attendee5').value}}
+          </div>
+      </div>
+      <div class="row">
+          <div *ngIf="formData.get('attendee6').value" class="col-md-6">
+            <span>  Name of Attendee 6 : </span> {{formData.get('attendee6').value}}
+          </div>
+
+        </div>
+

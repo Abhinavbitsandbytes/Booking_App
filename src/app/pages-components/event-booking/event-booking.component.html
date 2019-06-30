@@ -1,0 +1,118 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+  <div class="event_heading">{{eventName}}</div>
+  <div *ngIf="isTicketBooked" class="event_heading">Ticket Booked</div>
+  <div class="event_heading">Number of available seats : {{availableSeats}}</div>
+    </div>
+  </div>
+<form [formGroup]="bookingForm" name="bookingForm">
+    <div class="row">
+        <div class="col-md-3">
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input style="width: 100%; " matInput placeholder="Name*"
+                    name="name" formControlName="name" required>
+                    <mat-error *ngIf="bookingForm.get('name').errors">{{getErrrorMessage('name')}} </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="col-md-3">
+
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" name="email" formControlName="email" required>
+            
+                <mat-error  *ngIf="bookingForm.get('email').errors">{{getErrrorMessage('email')}} </mat-error>
+          </mat-form-field>
+          </div>
+
+        <div class="col-md-3">
+
+            <mat-form-field>
+                <mat-label>Phone Number</mat-label>
+                <input matInput placeholder="Phone Number" name="mobile_no"
+                    formControlName="mobile_no" required>
+                    <!-- <mat-error>Please enter 10 digit phone number</mat-error> -->
+                    <mat-error> Please enter 10 digit phone number </mat-error>
+            </mat-form-field>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+
+            <mat-form-field>
+                <mat-label>No. of Seats</mat-label>
+                <mat-select name="seats" placeholder="No. of Seats"
+                    formControlName="seats" required>
+                    
+                    <mat-option value="1">1</mat-option>
+                    <mat-option value="2">2</mat-option>
+                    <mat-option value="3">3</mat-option>
+                    <mat-option value="4">4</mat-option>
+                    <mat-option value="5">5</mat-option>
+                    <mat-option value="6">6</mat-option>
+                </mat-select>
+                <mat-error *ngIf="bookingForm.get('seats').errors" > {{getErrrorMessage('seats')}} </mat-error>
+            </mat-form-field>
+        </div>
+      
+    
+  </div>
+  <div class="row">
+      <div *ngIf=" !bookingForm.get('seats').errors && bookingForm.get('seats').value && seatMap[bookingForm.get('seats').value]>1" class="col-md-2">
+          <mat-form-field>
+              <mat-label>Name of Attendee 2</mat-label>
+              <input style="width: 100%" matInput placeholder="Name of Attendee 2"
+                  name="attendee2" formControlName="attendee2" required>
+                  <mat-error >“Please enter the name of Attendee 2</mat-error>
+          </mat-form-field>
+      </div>
+      <div *ngIf="!bookingForm.get('seats').errors && bookingForm.get('seats').value && seatMap[bookingForm.get('seats').value]>2" class="col-md-2">
+          <mat-form-field>
+              <mat-label>Name of Attendee 3</mat-label>
+              <input style="width: 100%" matInput placeholder="Name of Attendee 3"
+                  name="attendee3" formControlName="attendee3" required>
+                  <mat-error >“Please enter the name of Attendee 3</mat-error>
+          </mat-form-field>
+      </div>
+      <div *ngIf="!bookingForm.get('seats').errors && bookingForm.get('seats').value && seatMap[bookingForm.get('seats').value]>3" class="col-md-2">
+          <mat-form-field>
+              <mat-label>Name of Attendee 4</mat-label>
+              <input style="width: 100%" matInput placeholder="Name of Attendee 4"
+                  name="attendee4" formControlName="attendee4" required>
+                  <mat-error >“Please enter the name of Attendee 4</mat-error>
+          </mat-form-field>
+      </div>
+      <div *ngIf="!bookingForm.get('seats').errors && bookingForm.get('seats').value && seatMap[bookingForm.get('seats').value]>4" class="col-md-2">
+          <mat-form-field>
+              <mat-label>Name of Attendee 5</mat-label>
+              <input style="width: 100%" matInput placeholder="Name of Attendee 5"
+                  name="attendee5" formControlName="attendee5" required>
+                  <mat-error >“Please enter the name of Attendee 5</mat-error>
+          </mat-form-field>
+      </div>
+      <div *ngIf="!bookingForm.get('seats').errors && bookingForm.get('seats').value && seatMap[bookingForm.get('seats').value]>5" class="col-md-2">
+          <mat-form-field>
+              <mat-label>Name of Attendee 6</mat-label>
+              <input style="width: 100%" matInput placeholder="Name of Attendee 6"
+                  name="attendee6" formControlName="attendee6" required>
+                  <mat-error >“Please enter the name of Attendee 6</mat-error>
+          </mat-form-field>
+      </div>
+    
+  </div>
+
+
+</form>
+
+<div class="row" style="margin-top: 80px;">
+  <div class="col-md-6 col-3" style="text-align: right;">
+      <button   (click)="onSubmit()" [disabled]="isTicketBooked"  type="button " class="btn btn-default book_now_button">Submit</button>
+  </div>
+  <div class="col-md-6 col-3" style="text-align:left ;">
+      <button   (click)="onCancel()" [disabled]="isTicketBooked"  type="button" class="btn btn-default book_now_button">Cancel</button>
+  </div>
+</div>
+</div>

@@ -1,0 +1,89 @@
+{
+   "eventDetails"  : [
+    {
+      "id" : 1,
+      "name" : "ART EXHIBITION",
+      "imagePath" : "assets/art_exhibition.jpg",
+      "date" : "04/08/2019",
+      "seats":"34"
+    },
+    {
+      "id" : 2,
+      "name" : "MUSIC CONCERT",
+      "imagePath" : "assets/music_concert.jpg",
+      "date" : "25/09/2019",
+      "seats":"256"
+    },
+    {
+      "id" : 3,
+      "name" : "POETRY READING",
+      "imagePath" : "assets/poetry_reading.png",
+      "date" : "02/07/2019",
+      "seats":"2"
+    },
+    {
+      "id" : 4,
+      "name" : "FOOD FESTIVAL",
+      "imagePath" : "assets/food_festival.jpg",
+      "date" : "16/09/2019",
+      "seats":"224"
+    },
+    {
+      "id" : 5,
+      "name" : "BOOK FAIR",
+      "imagePath" : "assets/book_fair.webp",
+      "date" : "19/02/2020",
+      "seats":"198"
+    },
+    {
+      "id" : 6,
+      "name" : "STAND UP COMEDY",
+      "imagePath" : "assets/standup_comedy.jpg",
+      "date" : "28/011/2018",
+      "seats":"42"
+    },
+    {
+      "id" : 7,
+      "name" : "MARATHON",
+      "imagePath" : "assets/marathon.jpg" ,
+      "date" : "31/10/2019",
+      "seats":"111"
+    },
+    {
+      "id" : 8,
+      "name" : "YOGA AND MEDITATION",
+      "imagePath" : "assets/yoga.jpg" ,
+      "date" : "3/7/2019",
+      "seats":"66"
+    },
+    {
+      "id" : 9,
+      "name" : "AMUSEMENT PARK",
+      "imagePath" : "assets/amusement.webp" ,
+      "date" : "1/12/2019",
+      "seats":"34"
+    },
+    {
+      "id" : 10,
+      "name" : "TENNIS CHAMPIONSHIP",
+      "imagePath" : "assets/tennis.jpg" ,
+      "date" : "05/10/2020",
+      "seats":"567"
+    },
+    {
+      "id" : 11,
+      "name" : "TREK AND TRAILS",
+      "imagePath" : "assets/trekking.jpg" ,
+      "date" : "19/10/2019",
+      "seats":"0"
+    },
+    {
+      "id" : 12,
+      "name" : "PARAGLIDING",
+      "imagePath" : "assets/paraglading.jpg" ,
+      "date" : "3/3/2020",
+      "seats":"76"
+    }
+
+  ]
+}
